@@ -13,7 +13,40 @@
 		6F09209C2442994200E5F13F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F09209A2442994200E5F13F /* Main.storyboard */; };
 		6F09209E2442994A00E5F13F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F09209D2442994A00E5F13F /* Assets.xcassets */; };
 		6F0920A12442994A00E5F13F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F09209F2442994A00E5F13F /* LaunchScreen.storyboard */; };
+		6F0920B92442A9A000E5F13F /* EventShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0920B72442A97300E5F13F /* EventShared.framework */; };
+		6F0920BA2442A9A000E5F13F /* EventShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0920B72442A97300E5F13F /* EventShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F0920B42442A97300E5F13F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F0920AC2442A97300E5F13F /* Dependencies.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "Dependencies::Dependencies::Product";
+			remoteInfo = Dependencies;
+		};
+		6F0920B62442A97300E5F13F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F0920AC2442A97300E5F13F /* Dependencies.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "EventShared::EventShared::Product";
+			remoteInfo = EventShared;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6F0920BB2442A9A000E5F13F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6F0920BA2442A9A000E5F13F /* EventShared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6F0920912442994200E5F13F /* Event-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +57,8 @@
 		6F09209D2442994A00E5F13F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F0920A02442994A00E5F13F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F0920A22442994A00E5F13F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F0920A82442A2D200E5F13F /* Event-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Event-iOS.xcodeproj"; sourceTree = "<group>"; };
+		6F0920AC2442A97300E5F13F /* Dependencies.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dependencies.xcodeproj; path = Dependencies/Dependencies.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F0920B92442A9A000E5F13F /* EventShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +78,9 @@
 			children = (
 				6F0920932442994200E5F13F /* Event-iOS */,
 				6F0920922442994200E5F13F /* Products */,
+				6F0920A82442A2D200E5F13F /* Event-iOS.xcodeproj */,
+				6F0920AC2442A97300E5F13F /* Dependencies.xcodeproj */,
+				6F0920B82442A9A000E5F13F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +106,27 @@
 			path = "Event-iOS";
 			sourceTree = "<group>";
 		};
+		6F0920A92442A2D200E5F13F /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F0920AD2442A97300E5F13F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F0920B52442A97300E5F13F /* Dependencies.framework */,
+				6F0920B72442A97300E5F13F /* EventShared.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F0920B82442A9A000E5F13F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +137,7 @@
 				6F09208D2442994200E5F13F /* Sources */,
 				6F09208E2442994200E5F13F /* Frameworks */,
 				6F09208F2442994200E5F13F /* Resources */,
+				6F0920BB2442A9A000E5F13F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -113,12 +174,39 @@
 			mainGroup = 6F0920882442994100E5F13F;
 			productRefGroup = 6F0920922442994200E5F13F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6F0920AD2442A97300E5F13F /* Products */;
+					ProjectRef = 6F0920AC2442A97300E5F13F /* Dependencies.xcodeproj */;
+				},
+				{
+					ProductGroup = 6F0920A92442A2D200E5F13F /* Products */;
+					ProjectRef = 6F0920A82442A2D200E5F13F /* Event-iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6F0920902442994200E5F13F /* Event-iOS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6F0920B52442A97300E5F13F /* Dependencies.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Dependencies.framework;
+			remoteRef = 6F0920B42442A97300E5F13F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F0920B72442A97300E5F13F /* EventShared.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EventShared.framework;
+			remoteRef = 6F0920B62442A97300E5F13F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6F09208F2442994200E5F13F /* Resources */ = {

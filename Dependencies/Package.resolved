@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "EventShared",
+        "repositoryURL": "https://github.com/brfbrf/EventShared.git",
+        "state": {
+          "branch": null,
+          "revision": "ebbfad7a951f42eb7eb93d2bf08be453a1535d1b",
+          "version": "0.1.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
