@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print("in viewDidLoad()")
+
         
         let url = URL(string: "http://localhost:8080" + ApiRoutes.event)
         
